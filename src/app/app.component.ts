@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  title = 'todoapp';
   welcome = 'todoapp';
   tasks = ['Task 1', 'Task 2', 'Task 3'];
 }
