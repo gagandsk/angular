@@ -12,4 +12,7 @@ export class LabsComponent {
   title = 'todoapp';
   welcome = 'todoapp';
   tasks = ['Task 1', 'Task 2', 'Task 3'];
+  name = 'Goku';
+  age = 30;
+  //private age = 30;
 }
