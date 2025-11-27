@@ -15,4 +15,12 @@ export class LabsComponent {
   name = 'Goku';
   age = 30;
   //private age = 30;
+  disabled = true;
+  img = 'https://picsum.photos/200/300';
+
+  person = {
+    name: 'Angular',
+    age: 10,
+    img: 'https://picsum.photos/200/300',
+  };
 }

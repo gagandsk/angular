@@ -16,5 +16,17 @@
     <h2>{{ "Hola".repeat(4) }}</h2>
     <p>la suma de 3 + 3 es {{ 3 + 3 }}</p>
     <p>Holaa! Mi nombre es {{ name }} y tengo {{ age }} años</p>
+    <hr />
+    <img [src]="img" alt="" />
+    <input type="text" [value]="name" />
+    <button [disabled]="disabled">Click</button>
+    <hr />
+    <p>person: {{ person.name }}</p>
+    <p>person age: {{ person.age }}</p>
+    <p>person img: {{ person.img }}</p>
+    <div>
+      <img [src]="person.img" alt="" />
+      <input type="number" [value]="person.age" />
+    </div>
   </body>
 </html>
