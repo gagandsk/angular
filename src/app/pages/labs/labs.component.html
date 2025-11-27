@@ -38,5 +38,20 @@
       [value]="person.age"
       (change)="changeHandler($event)"
     />
+
+    <input type="text" [value]="person.name" (change)="changeHandler($event)" />
+
+    <p>(keydown)</p>
+    <input
+      type="text"
+      [value]="person.name"
+      (keydown)="keydownHandler($event)"
+    />
+    <p>(keydown) tecla especifica</p>
+    <input
+      type="text"
+      [value]="person.name"
+      (keydown.shift.t)="clickHandler()"
+    />
   </body>
 </html>
