@@ -23,4 +23,12 @@ export class LabsComponent {
     age: 10,
     img: 'https://picsum.photos/200/300',
   };
+
+  clickHandler() {
+    alert('You clicked the button!');
+  }
+
+  changeHandler(event: Event) {
+    console.log('---->', event);
+  }
 }

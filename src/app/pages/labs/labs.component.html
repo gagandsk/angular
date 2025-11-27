@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="container">
     <h1>{{ welcome }}</h1>
     <ul>
       <li *ngFor="let task of tasks">
@@ -28,5 +28,15 @@
       <img [src]="person.img" alt="" />
       <input type="number" [value]="person.age" />
     </div>
+    <hr />
+    <button (click)="clickHandler()">Evento click</button>
+    <button (dblclick)="clickHandler()">Evento doble click</button>
+
+    <p>(change)</p>
+    <input
+      type="number"
+      [value]="person.age"
+      (change)="changeHandler($event)"
+    />
   </body>
 </html>
