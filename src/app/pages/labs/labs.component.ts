@@ -1,10 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-labs',
-  imports: [RouterOutlet, CommonModule],
+  imports: [CommonModule],
   templateUrl: './labs.component.html',
   styleUrl: './labs.component.css',
 })
@@ -12,6 +11,7 @@ export class LabsComponent {
   title = 'todoapp';
   welcome = 'todoapp';
   tasks = ['Task 1', 'Task 2', 'Task 3'];
+  tasks2 = signal(['task signal 1', 'task signal 2', 'task signal 3']);
   name = signal('Goku');
   age = 30;
   //private age = 30;

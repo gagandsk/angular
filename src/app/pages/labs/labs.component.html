@@ -53,6 +53,12 @@
       [value]="person.name"
       (keydown.shift.t)="clickHandler()"
     />
+
+    <p>total {{ tasks2().length }}</p>
+    <ul>
+      <li *ngFor="let task of tasks2(); index as i">{{ i }} : {{ task }}</li>
+    </ul>
+
     <h1>Signals</h1>
     <input type="text" [value]="name()" (change)="changeHandler($event)" />
     <p>cambio reactivo de name: {{ name() }}</p>
