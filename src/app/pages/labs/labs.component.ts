@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -12,7 +12,7 @@ export class LabsComponent {
   title = 'todoapp';
   welcome = 'todoapp';
   tasks = ['Task 1', 'Task 2', 'Task 3'];
-  name = 'Goku';
+  name = signal('Goku');
   age = 30;
   //private age = 30;
   disabled = true;
@@ -29,7 +29,9 @@ export class LabsComponent {
   }
 
   changeHandler(event: Event) {
-    console.log('---->', event);
+    const input = event.target as HTMLInputElement;
+    const newValue = input.value;
+    this.name.set(newValue);
   }
 
   keydownHandler(event: KeyboardEvent) {

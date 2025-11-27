@@ -15,7 +15,7 @@
     <hr />
     <h2>{{ "Hola".repeat(4) }}</h2>
     <p>la suma de 3 + 3 es {{ 3 + 3 }}</p>
-    <p>Holaa! Mi nombre es {{ name }} y tengo {{ age }} años</p>
+    <p>Holaa! Mi nombre es {{ name() }} y tengo {{ age }} años</p>
     <hr />
     <img [src]="img" alt="" />
     <input type="text" [value]="name" />
@@ -53,5 +53,8 @@
       [value]="person.name"
       (keydown.shift.t)="clickHandler()"
     />
+    <h1>Signals</h1>
+    <input type="text" [value]="name()" (change)="changeHandler($event)" />
+    <p>cambio reactivo de name: {{ name() }}</p>
   </body>
 </html>
